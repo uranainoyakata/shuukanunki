@@ -25,10 +25,18 @@ function renderPage(data) {
     calendarGrid.innerHTML = data.calendar.map(day => {
         const luckyHtml = day.lucky.map(l => {
             let className = 'badge';
-            if (l.includes('一粒万倍')) className += ' ichiryu';
-            if (l.includes('大安')) className += ' taian';
-            if (l.includes('寅')) className += ' tora';
-            return `<span class="${className}">${l}</span>`;
+            const name = typeof l === 'string' ? l : l.name;
+            const comment = typeof l === 'object' ? l.comment : null;
+
+            if (name.includes('一粒万倍')) className += ' ichiryu';
+            if (name.includes('大安')) className += ' taian';
+            if (name.includes('寅')) className += ' tora';
+
+            let html = `<span class="${className}">${name}</span>`;
+            if (comment) {
+                html += `<p class="lucky-comment">${comment}</p>`;
+            }
+            return html;
         }).join('');
 
         return `
