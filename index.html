@@ -4,54 +4,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>しょうじの週間運気予報</title>
+    <title>しょうじ監修 ひめくりカレンダー 『日進月歩』</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Yuji+Syuku&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <div class="bg-layer"></div>
 
-    <header class="site-header fade-in">
-        <h1 class="site-title">
-            <span class="en">Weekly Forecast</span>
-            <span class="ja">週間運気予報</span>
-        </h1>
+    <header class="header">
+        <div class="header-logo">
+            <span class="logo-text-small">しょうじの</span><br>
+            <span class="logo-text-large">鑑定</span>
+        </div>
     </header>
 
-    <main>
-        <!-- Weekly Calendar -->
-        <section class="calendar-section fade-in delay-1">
-            <div class="calendar-header">
-                <span class="period" id="display-period">Loading...</span>
-            </div>
-            <div class="calendar-grid" id="calendar-grid">
+    <div class="hero-section fade-in">
+        <p class="hero-subtitle">4000人以上を鑑定した瀬戸内出身 龍神接続者「しょうじ」監修</p>
+        <h2 class="hero-catchphrase">「言葉の力で<br>運命を変える」</h2>
+        <h1 class="hero-main-title">ひめくりカレンダー<br>『日進月歩』</h1>
+        <p class="hero-subtext">— DAILY MESSAGE CALENDAR —</p>
+        <div class="hero-banner">龍神の力で運命を導く</div>
+    </div>
+
+    <main class="content-wrapper">
+
+        <!-- 今日のささやき -->
+        <section class="theme-section fade-in delay-1" id="daily-message">
+            <!-- Dynamic Content -->
+        </section>
+
+        <!-- 運勢 -->
+        <section class="fortune-section fade-in delay-2">
+            <h2 class="fortune-section-title">生まれ月別 運気指南</h2>
+            <div class="fortune-grid" id="fortune-grid">
                 <!-- Dynamic Content -->
             </div>
         </section>
 
-        <!-- Weekly Theme -->
-        <section class="weekly-theme fade-in delay-1" id="weekly-theme">
-            <!-- Dynamic Content -->
-        </section>
-
-        <!-- Fortune Grid -->
-        <section class="fortune-grid fade-in delay-2" id="fortune-grid">
-            <!-- Dynamic Content -->
-        </section>
-
         <!-- Footer Link -->
         <div class="footer-link-area fade-in delay-3">
-            <a href="https://lin.ee/mR2IPIr" class="minimal-btn">
-                詳細な鑑定を申し込む
+            <a href="https://lin.ee/mR2IPIr" class="action-btn">
+                <span class="btn-text">詳細な鑑定を申し込む</span>
             </a>
         </div>
-
     </main>
 
     <footer class="site-footer">
-        <small>&copy; しょうじの週間運気予報</small>
+        <small>&copy; しょうじ監修 ひめくりカレンダー 『日進月歩』</small>
     </footer>
 
     <script src="script.js"></script>
